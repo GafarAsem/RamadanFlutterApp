@@ -20,5 +20,5 @@ const kBoxDecoration =BoxDecoration(
 );
 
 
-var kStyleText=GoogleFonts.almarai(fontSize: 20,color: kBlackPrimary);
+var kStyleText=GoogleFonts.almarai(color: kBlackPrimary,fontWeight: FontWeight.bold);
 var kStyleTextBold=GoogleFonts.almarai(fontSize: 30,color: kBlackPrimary,fontWeight: FontWeight.bold);
