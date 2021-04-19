@@ -1,13 +1,17 @@
 import 'package:adhan/adhan.dart';
 import 'package:flutter/material.dart';
+import 'package:ramadan_app/Service/Location/location.dart';
 import 'package:ramadan_app/Service/PrayTime/pray_time.dart';
-
+import 'package:timezone/standalone.dart' as tz;
 import 'Scenes/Home/home_page.dart';
 
-void main() {
+Future<void> main() async {
   runApp(MyApp());
-  PrayTime prayTime=PrayTime(28.393130, 36.583493);
-  print(prayTime.getPrayTime(Prayer.isha));
+  var position=await Location.getPosition();
+  PrayTime prayTime=PrayTime();
+  prayTime.setLocation(position.latitude, position.longitude, CalculationMethod.umm_al_qura, Madhab.hanafi);
+  print(prayTime.getPrayTime(Prayer.dhuhr));
+
 }
 
 class MyApp extends StatelessWidget {

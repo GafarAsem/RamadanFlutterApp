@@ -25,6 +25,7 @@ dependencies:
   clippy_flutter: ^1.1.1
   geolocator: ^7.0.3
   intl: ^0.17.0
+  timezone: ^0.7.0
   adhan: ^1.1.16
   line_awesome_icons: ^1.0.4+2
   flutter_switch: ^0.3.1
